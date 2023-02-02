@@ -38,11 +38,12 @@ def insertion_count(a_list):
 
     value = a_list[index] #item in list at each index
     pos = index - 1 #comparing value to each item to the left in the list
-    while pos >= 0 and a_list[pos] > value:
-      comparisons +=1 #checking for comparisons
-      exchanges += 1 #checking for exchanges in the list
-      a_list[pos + 1] = a_list[pos]
-      pos -= 1
-      comparisons += 1 #second check for comparisons
-    a_list[pos + 1] = value
+    while pos >= 0:
+      comparisons +=1
+      if a_list[pos] > value: #this line needs to be broken per instructions
+          exchanges += 1 #checking for exchanges in the list
+          a_list[pos + 1] = a_list[pos]
+          pos -= 1
+      a_list[pos + 1] = value
   return (comparisons, exchanges) #returns tuple of comparisons and exchanges made while insertion sorting through a list
+

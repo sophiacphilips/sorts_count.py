@@ -46,4 +46,4 @@ def insertion_count(a_list):
     comparisons += 1 #checking for comparisons again
   return (comparisons, exchanges) #returns tuple of comparisons and exchanges made while insertion sorting through a list
 
-print(insertion_count([10, 0, -1]))
+

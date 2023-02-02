@@ -41,9 +41,11 @@ def insertion_count(a_list):
     while pos >= 0: #separated from "if a_list[pos] > value:" so comparisons aren't ran on on comparing the index to zero
       comparisons +=1 #checking for comparisons in values of the list
       if a_list[pos] > value: #compares values in the list
-          exchanges += 1 #checking for exchanges in the list
-          a_list[pos + 1] = a_list[pos]
-          pos -= 1
-      a_list[pos + 1] = value
+        exchanges += 1 #checking for exchanges in the list
+        a_list[pos + 1] = a_list[pos]
+        pos -= 1
+      else:
+        break #break loop
+    a_list[pos + 1] = value
   return (comparisons, exchanges) #returns tuple of comparisons and exchanges made while insertion sorting through a list
 
